@@ -1,21 +1,22 @@
 ﻿using System;
 class Program
 {
+    public static bool IsEven(int x)
+    {
+        return x % 2 == 0;
+    }
+    public static string GetMessage(int x)
+    {
+        if (IsEven(x))
+        {
+            return "Двері відкриваються!";
+        }
+        return "Двері зачинені...";
+    }
     static void Main()
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
-        bool IsEven(int x)
-        {
-            return x % 2 == 0;
-        }
-        string GetMessage(int x)
-        {
-            if (IsEven(x))
-            {
-                return "Двері відкриваються";
-            }
-            return "Двері зачинені";
-        }
+        
         if (int.TryParse(Console.ReadLine(), out int enteredNumb))
         {
             Console.WriteLine(GetMessage(enteredNumb));
@@ -26,4 +27,3 @@ class Program
         }
     }
 }
-
