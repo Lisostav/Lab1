@@ -1,29 +1,33 @@
-﻿using System;
-class Program
+﻿namespace Task1
 {
-    public static bool IsEven(int x)
+    using System;
+
+    public class Program
     {
-        return x % 2 == 0;
-    }
-    public static string GetMessage(int x)
-    {
-        if (IsEven(x))
+        public static bool IsEven(int x)
         {
-            return "Двері відкриваються!";
+            return x % 2 == 0;
         }
-        return "Двері зачинені...";
-    }
-    static void Main()
-    {
-        Console.OutputEncoding = System.Text.Encoding.UTF8;
-        
-        if (int.TryParse(Console.ReadLine(), out int enteredNumb))
+        public static string GetMessage(int x)
         {
-            Console.WriteLine(GetMessage(enteredNumb));
+            if (IsEven(x))
+            {
+                return "Двері відкриваються!";
+            }
+            return "Двері зачинені...";
         }
-        else
+        static void Main()
         {
-            Console.WriteLine("Неправильний ввід");
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            if (int.TryParse(Console.ReadLine(), out int enteredNumb))
+            {
+                Console.WriteLine(GetMessage(enteredNumb));
+            }
+            else
+            {
+                Console.WriteLine("Неправильний ввід");
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿class Program
+﻿namespace Task5 {
+public class Program
 {
 
     static Random rnd = new Random();
@@ -51,4 +52,5 @@
         int[][] groups = GenerateJaggedArr();
         PrintGroupStatistics(groups);
     }
+}
 }
